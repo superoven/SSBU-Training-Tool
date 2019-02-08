@@ -1,0 +1,297 @@
+// GPC Online Library
+// smash_bros_ultimate_training_tool.gpc
+
+define NUM_COMBOS = 4;
+
+int trainMode;
+int activate;
+
+init {
+    trainMode = 0;
+    activate = 0;
+}
+
+main {
+    handleActivation();
+    if (activate) {
+        handleComboChoice();
+        runComboChoice();
+    }
+}
+
+combo RandomDILeftRight {
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+}
+
+combo JumpOutOfCombo {
+    //Down Taunt, then hold jump and random DI
+    wait(1000);
+    set_val(SWITCH_DOWN, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, 100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(60);
+    set_val(SWITCH_LX, -100);
+    wait(60);
+    set_val(SWITCH_X, 100);
+    wait(500);
+    set_val(SWITCH_X, 0);
+    set_val(SWITCH_LX, 0);
+}
+
+combo SpamDodge {
+    set_val(SWITCH_LX, 100);
+    wait(20);
+    set_val(SWITCH_ZL, 100);
+    wait(20);
+    set_val(SWITCH_LX, -100);
+    wait(20);
+    set_val(SWITCH_ZL, 100);
+    wait(20);
+}
+
+combo SpamNairOutOfCombo {
+    // Up Taunt, then nair constantly
+    wait(1000);
+    set_val(SWITCH_UP, 100);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+    set_val(SWITCH_A, 100);
+    wait(60);
+    set_val(SWITCH_A, 0);
+    wait(60);
+}
+
+function runComboChoice() {
+    if (trainMode == 0) {
+        combo_run(RandomDILeftRight);
+    } else if (trainMode == 1) {
+        combo_run(SpamDodge);
+    } else if (trainMode == 2) {
+        combo_run(SpamNairOutOfCombo);
+    } else if (trainMode == 3) {
+        combo_run(JumpOutOfCombo);
+    }
+}
+
+function handleActivation() {
+    if (event_press(SWITCH_A)) {
+        set_val(SWITCH_A, 0);
+        if (activate) {
+            activate = 0;
+        } else {
+            activate = 1;
+        }
+    }
+}
+
+function handleComboChoice() {
+    if (event_press(SWITCH_LEFT)) {
+        if (trainMode == 0) {
+            trainMode = NUM_COMBOS - 1;
+        } else {
+            trainMode = trainMode - 1;
+        }
+    } else if (event_press(SWITCH_RIGHT)) {
+        if (trainMode == NUM_COMBOS - 1) {
+            trainMode = 0;
+        } else {
+            trainMode = trainMode + 1;
+        }
+    }
+}
